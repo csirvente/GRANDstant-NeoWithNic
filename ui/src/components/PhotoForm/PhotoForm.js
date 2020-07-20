@@ -27,7 +27,7 @@ class PhotoCreate extends Component {
                 {/* <Link to="/photolist">Back</Link> */}
                 <h3>Add photo</h3>
                 <form onSubmit={this.onSubmit.bind(this)}>
-                    <label>Photo file</label>
+                    <label>Photo link</label>
                     <input 
                         onChange={event => this.setState({ file: event.target.value })}
                         value={this.state.file}

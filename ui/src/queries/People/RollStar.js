@@ -2,13 +2,14 @@ import gql from "graphql-tag";
 
 const RollStar = gql`
   query RollStar {
-    Roll(type: STAR){
+    Roll(rollType: STAR){
       id
-      type
+      rollType
       name
       person {
         id
         name
+        personPhoto
       }
     }
   }

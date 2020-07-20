@@ -7,7 +7,7 @@ class Gallery_Photo extends Component {
             // <div className={`gallery__item--${this.props.size}`}>
                 <> 
                     <img className="gallery__img" 
-                        src={`../img/Gallery/${this.props.file}`} 
+                        src={`${this.props.file}`} 
                         alt={`${this.props.alt}`} >
                     </img>
                 </>

@@ -4,16 +4,17 @@ type Person {
   description: String
   roll: [Roll] @relation(name: "PLAYING", direction: "OUT")
   photo: [Photo] @relation(name: "IN_PHOTO", direction: "OUT")
+  personPhoto: String!
 }
 
 type Roll {
   id: ID!
-  type: RollType!
+  rollType: Rolltype!
   name: String!
   person: [Person] @relation(name: "PLAYING", direction: "IN")
 }
 
-enum RollType {
+enum Rolltype {
   STAR
   SUPPORT
   EXTRA
@@ -36,4 +37,12 @@ enum Location {
   LOCATION1
   LOCATION2
   LOCATION3
+}
+
+input _PersonInput {
+  name: String!
+}
+
+input _RollInput {
+  name: String!
 }

@@ -7,7 +7,7 @@ const Person = gql`
       name
       roll {
         name
-        type
+        rollType
       }
     }
   }

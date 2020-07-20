@@ -5,7 +5,7 @@ const Rolls = gql`
   Roll {
     id
     name
-    type
+    rollType
   }
 }
 `;

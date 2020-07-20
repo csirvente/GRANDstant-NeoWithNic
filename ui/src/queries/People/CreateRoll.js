@@ -1,11 +1,11 @@
 import gql from "graphql-tag";
 
 const CreateRoll = gql`
-  mutation CreateRoll($name: String!, $type: String!) {
-    CreateRoll(name: $name, type: $type) {
+  mutation CreateRoll($name: String!, $rollType: Rolltype!) {
+    CreateRoll(name: $name, rollType: $rollType) {
       id
       name
-      type
+      rollType
     }
   }
 `;

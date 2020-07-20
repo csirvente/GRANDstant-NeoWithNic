@@ -13,7 +13,7 @@ class RollCreate extends Component {
         event.preventDefault();
         this.props.mutate({
             variables: {    name: this.state.name, 
-                            type: this.state.type, 
+                            rollType: this.state.rollType, 
                              },
             refetchQueries: [{ query: FetchRolls }]
         });
@@ -34,8 +34,8 @@ class RollCreate extends Component {
                         <br></br>
                     <label>Roll type</label>
                     <input 
-                        onChange={event => this.setState({ type: event.target.value })}
-                        value={this.state.type}
+                        onChange={event => this.setState({ rollType: event.target.value })}
+                        value={this.state.rollType}
                     />
                         <br></br>
                         <br></br>
